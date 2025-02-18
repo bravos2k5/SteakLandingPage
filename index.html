@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Steak</title>
+        <meta name="description" content="" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/Steam.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="SteaK" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <!--Replace with the current website url-->
+        <meta property="og:image" content="" />
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-black tw-text-white"
+    >
+        <header
+            class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around"
+        >
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+                <img
+                    src="./assets/logo/Steam.png"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="https://bravosstorage.blob.core.windows.net/steak/mysetup.exe"
+                        aria-label="signup"
+                        class="tw-rounded-full tw-bg-white tw-px-3 tw-py-2 tw-text-black tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Tải xuống</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px]"
+            id="hero-section"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            >
+                <div
+                    class="tw-flex tw-flex-col tw-place-content-center tw-items-center"
+                >
+                    <div
+                        class="reveal-up gradient-text tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="" style="font-size: larger"> Steak </span>
+                        <br />
+                        <span class=""> Best game trading platform in VietNam </span>
+                    </div>
+                    <div
+                        class="reveal-up tw-mt-10 tw-max-w-[450px] tw-p-2 tw-text-center tw-text-gray-300 max-lg:tw-max-w-full"
+                    >
+                        Sản phẩm tâm huyết của Bravos Team
+                    </div>
+
+                    <div
+                        class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4"
+                    >
+                        <a
+                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href="https://bravosstorage.blob.core.windows.net/steak/mysetup.exe"
+                        >
+                            Tải xuống cho Windows
+                        </a>
+
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
+                    id="dashboard-container"
+                >
+                    <div
+                        class="tw-relative tw-max-w-[80%] tw-overflow-hidden tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
+                        id="dashboard"
+                    >
+                        <img
+                            src="./assets/images/home/steak.png"
+                            alt="dashboard"
+                            class="tw-h-full tw-w-full tw-object-cover tw-opacity-90 max-lg:tw-object-contain"
+                        />
+                    </div>
+
+                    <div
+                        class="hero-img-bg-grad tw-absolute tw-left-[20%] tw-top-5 tw-h-[200px] tw-w-[200px]"
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
+        >
+            <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
+                Các công nghệ sử dụng
+            </h2>
+
+            <div class="reveal-up carousel-container">
+                <div
+                    class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
+                >
+                    <!-- add the brands using your app  -->
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/google.svg"
+                            alt="Google"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/microsoft.svg"
+                            alt="Microsoft"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/microsoft-azure-vector-logo.svg"
+                            alt="Azure"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/java-svgrepo-com.svg"
+                            alt="Java"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/reddit.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2
+                        class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-3xl"
+                    >
+                        Quá trình dự án
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-h-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-rocket-takeoff-fill tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                                Trong vòng 1 tháng ngắn ngủi
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                Sự thật đấy chúng tôi đã hoàn thành dự án chỉ 1 tháng
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-text-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-layout-sidebar-inset tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                                Sự may mắn
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                Sở hữu những thành viên tâm huyết
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-h-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-lightning-charge-fill tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                                Với mong muốn điểm cao
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                Chúng tôi đã vận dụng hết sức mạnh
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features"
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2
+                        class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-2xl"
+                    >
+                        Các tính năng nổi bật
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-globe"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Tính toàn cầu
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Miễn là còn tiền thuê database <br>
+                                thì app còn xài được
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Tầm nhìn
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Với tham vọng thống trị thế giới
+                                trò chơi tại nước Đông Lào. <br>
+                                Steam bị chặn thì sẽ có SteaK
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-cloud-fill"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Lưu trữ đám mây
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Các tập tin như game và dữ liệu người dùng
+                                sẽ được lưu trữ trên hệ thống đám mây
+                                của Microsoft Azure
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-fingerprint"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Hệ thống bảo mật
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Phần mềm được các hacker hàng đầu thế giới
+                                kiểm tra và bảo mật tuyệt đối 24/7 <br>
+                                Chỉ có xui mới bị hack thôi nhá
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-sliders"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Ứng dụng linh hoạt, tùy biến
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Miễn là bạn có source code thì bạn có thể
+                                làm gì cũng được với phần mềm này <br>
+                                Nhưng làm sao có source code thì ko biết
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-gear-fill"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Tính chất hư ảo
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Trang web này chỉ mang tính chất minh họa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div class="tw-flex">
+                    <div
+                        class="tw-max-h-[650px] tw-max-w-[850px] tw-overflow-hidden tw-rounded-lg tw-shadow-lg tw-shadow-[rgba(170,49,233,0.44021358543417366)]"
+                    >
+                        <img
+                            src="./assets/images/home/game.png"
+                            alt="coding"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+                        Giao diện thân thiện
+                    </h3>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            AI powered
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                            Phần mềm được xây dựng trên nền tảng AI, cụ thể là
+                            có sự hỗ trợ của ChatGPT và OpenAI để tạo ra một
+                            trải nghiệm tốt nhất cho mọi người dùng
+                        </span>
+                    </div>
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Java Swing
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                            Giao diện được xây dựng trên nền tảng Java Swing
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+                        Được tạo ra bởi công cụ mạnh mẽ
+                    </h3>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Easy to use
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                            Dùng Intellj IDEA hiện đại thay thế Netbean cũ kỹ <br>
+                            Dùng Git/Github để quản lý code
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="tw-flex">
+                    <div
+                        class="tw-max-h-[650px] tw-max-w-[850px] tw-overflow-hidden tw-rounded-lg tw-shadow-lg tw-shadow-[rgba(170,49,233,0.44021358543417366)]"
+                    >
+                        <img
+                            src="./assets/images/home/code.png"
+                            alt="coding"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%]"
+        >
+            <h3
+                class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-2xl"
+            >
+                Sự đánh giá của khách hàng
+            </h3>
+            <!-- Testimonials -->
+            <div
+                class="tw-mt-8 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3"
+            >
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Tôi không tin đây là sản phẩm của nhóm sinh viên
+                      trường FPoly, tôi rất thích sản phẩm này.
+                        Tôi quyết định sẽ mua nó ngay khi nó ra mắt.
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/elon.png"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="women"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Shark Elon Musk</div>
+                            <div class="tw-text-gray-400">Richest man in the world</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Nhôi nhất nhà nhíc nhái nhần nhềm nhày <br>
+                        Nhôi nhã nhùng nhó nhể nhải những nhêm <br>
+                        nhà nhôi nhiêu nhích
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/hailyhong.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Hải ly hồng</div>
+                            <div class="tw-text-gray-400">CEO</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Tôi thấy phần mềm này còn tốt hơn Steam
+                        tôi sẽ chuyển hết game của mình qua đây
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/gabe.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Gabe Newell</div>
+                            <div class="tw-text-gray-400">Steam, CEO</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Tôi đánh giá rất cao về phần mềm này <br>
+                        Tôi chấm nó 9 điểm rưỡi
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/huanhoahong-1_ugww.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Huấn Rose</div>
+                            <div class="tw-text-gray-400">Giang hồ mạng</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Tôi năm nay hơn 70 tuổi rồi, tôi vẫn
+                        chơi game mỗi ngày, tôi rất thích phần mềm này.
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/bacda.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Nguyễn Hữu Đa</div>
+                            <div class="tw-text-gray-400">Royal Guard VN</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        Phần mềm này nó tuyệt đến cái mức
+                        tôi có thể bỏ con và dành thời gian với nó <br>
+                        Tôi sẽ ủng hộ cho các bạn 5 triệu
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/jack-va-thien-an-5805.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Jack 5 củ</div>
+                            <div class="tw-text-gray-400">Đom đóm, CEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+        >
+            <h3
+                class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl"
+            >
+                Faq
+            </h3>
+            <div
+                class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4"
+            >
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Tôi có thể xin source code được không ?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        Sau khi thi xong môn học này, chúng tôi sẽ public nó với giá rẻ
+                    </div>
+                </div>
+
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Chúng tôi nên chấm bài này bao nhiêu điểm?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        Tất nhiên là 10 điểm rồi, chúng em đã làm hết sức mình ạ
+                    </div>
+                </div>
+
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Tôi gặp vấn đề về cài đặt?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        Hãy liên hệ Zalo miễn phí: 0704795312
+                    </div>
+                </div>
+
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Các bạn là ai?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                       Chúng tôi bao gồm 5 thành viên: <br>
+                        - Nguyễn Quốc Bảo <br>
+                        - Trịnh Văn Thuật <br>
+                        - Tô Minh Nguyệt Quế <br>
+                        - Đỗ Ngọc Chí <br>
+                        - Đỗ Nguyễn Trung Hiếu
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4"
+            >
+                <div class="tw-text-3xl max-md:tw-text-2xl">
+                    Still have questions?
+                </div>
+                <a
+                    href="https://www.facebook.com/bravos2k5"
+                    class="btn !tw-rounded-full !tw-border-[1px] !tw-border-solid !tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
+                >
+                    Contact
+                </a>
+            </div>
+        </section>
+
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/logo/Steam.png"
+                    alt="logo"
+                    srcset=""
+                    class="tw-max-w-[120px]"
+                />
+                <div>
+                    Trường cao đẳng FPT Polytechnic <br>
+                    Thành phố Hồ Chí Minh, Việt Nam
+                </div>
+
+            </div>
+
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>
